@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  colorRnd: string = "var(--aux-1-color)";
+  colorRnd: string = "";
 
   constructor() { }
 
@@ -16,8 +16,9 @@ export class QuestionComponent implements OnInit {
   }
 
   getBackGroundColor(){
-    let rndNum = Math.floor((Math.random() * 5) + 1) - 1;
-    this.colorRnd = `var(--aux-${rndNum}-color)`;
+    //var(--aux-1-color)
+    //let rndNum = Math.floor((Math.random() * 5) + 1) - 1;
+    //this.colorRnd = `var(--aux-${rndNum}-color)`;
   }
 
 }

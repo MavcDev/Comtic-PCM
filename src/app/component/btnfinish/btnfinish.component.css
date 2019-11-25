@@ -5,4 +5,8 @@
     height: 3.5em;
     width: 12em;
     background-color: brown;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    background-image: url('/assets/play/btn-next.png');
 }
