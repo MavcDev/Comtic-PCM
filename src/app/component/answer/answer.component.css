@@ -1,0 +1,37 @@
+
+
+:host{
+    display: flex;
+    width: 50%;
+    height: 7em;
+    position: relative;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.btn-select{
+    display: flex;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: bisque;
+    margin-left: -1.5em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-select-center{
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.text{
+    width: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    text-align: justify;
+    cursor: pointer;
+}

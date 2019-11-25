@@ -1,0 +1,38 @@
+
+.container{
+    width: 60%;
+    height: 10em;
+}
+
+.bar-top{
+    display: flex;
+    height: 3em;
+    border-top-right-radius: 0.5em;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--primary-color);
+}
+
+.bar-bottom{
+    display: flex;
+    height: 7em;
+    border-bottom-right-radius: 2em;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text-bar-top {
+    font-weight: bold;
+    color: var(--text-light);
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.text-bar-bottom{
+    width: 15em;
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 2em;
+    margin-right: 1em;
+    text-align: right;
+}

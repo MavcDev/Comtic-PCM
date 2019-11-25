@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-question-form',
+  selector: 'question-form',
   templateUrl: './question-form.component.html',
   styleUrls: ['./question-form.component.css']
 })
