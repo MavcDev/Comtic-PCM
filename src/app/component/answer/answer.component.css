@@ -1,9 +1,7 @@
-
-
 :host{
     display: flex;
     width: 50%;
-    height: 7em;
+    height: 10em;
     position: relative;
     align-items: center;
     background-color: aliceblue;
@@ -11,8 +9,8 @@
 
 .btn-select{
     display: flex;
-    height: 2em;
-    width: 2em;
+    height: 2.5em;
+    width: 2.5em;
     border-radius: 50%;
     background-color: bisque;
     margin-left: -1.5em;
@@ -22,8 +20,8 @@
 }
 
 .btn-select-center{
-    height: 0.7em;
-    width: 0.7em;
+    height: 1em;
+    width: 1em;
     border-radius: 50%;
     background-color: white;
 }
@@ -33,5 +31,6 @@
     margin-left: 0.5em;
     margin-right: 0.5em;
     text-align: justify;
+    font-size: 1.5em;
     cursor: pointer;
 }
