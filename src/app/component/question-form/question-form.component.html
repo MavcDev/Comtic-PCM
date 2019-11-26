@@ -1,9 +1,9 @@
 <div class="container">
-    <question></question>
-    <answer></answer>
-    <answer></answer>
-    <answer></answer>
+    <question [color]="listColorMain[indexColor].colorMain"></question>
+    <answer [color]="listColorMain[indexColor]"></answer>
+    <answer [color]="listColorMain[indexColor]"></answer>
+    <answer [color]="listColorMain[indexColor]"></answer>
 </div>
-<line-question></line-question>
-<label-next></label-next>
+<line-question [listColors]= "listColorLine" [postLine]="indexQuestion + 1" ></line-question>
+<label-next [color]="listColorMain[indexColor].colorMain"></label-next>
 <btnfinish></btnfinish>

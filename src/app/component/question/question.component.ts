@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'question',
@@ -7,18 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
-  colorRnd: string = "";
+  @Input()
+  color: any;
 
   constructor() { }
 
   ngOnInit() {
-    this.getBackGroundColor();
   }
-
-  getBackGroundColor(){
-    //var(--aux-1-color)
-    //let rndNum = Math.floor((Math.random() * 5) + 1) - 1;
-    //this.colorRnd = `var(--aux-${rndNum}-color)`;
-  }
-
 }

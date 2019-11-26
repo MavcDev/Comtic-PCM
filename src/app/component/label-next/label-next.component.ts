@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'label-next',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./label-next.component.css']
 })
 export class LabelNextComponent implements OnInit {
+
+  @Input()
+  color: string;
 
   constructor() { }
 

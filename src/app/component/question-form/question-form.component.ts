@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ColorService} from './../../service/color.service'
 
 @Component({
   selector: 'question-form',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionFormComponent implements OnInit {
 
-  constructor() { }
+  listColorLine: Array<any>;
+  listColorMain: Array<any>;
+
+  indexQuestion: number = 0;
+  indexColor: number = 0;
+
+  constructor(private colors: ColorService) { }
 
   ngOnInit() {
+    this.init();
+  }
+
+  init(){
+    this.listColorLine = this.colors.getListColors();
+    this.listColorMain = this.colors.getListMainColors();
   }
 
 }

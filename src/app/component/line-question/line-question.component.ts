@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'line-question',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./line-question.component.css']
 })
 export class LineQuestionComponent implements OnInit {
+
+  @Input()
+  listColors: Array<any>;
+
+  @Input()
+  postLine: number;
 
   constructor() { }
 

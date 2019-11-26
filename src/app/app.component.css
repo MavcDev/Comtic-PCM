@@ -1,11 +1,5 @@
 :host{
     --primary-color: #2b4d8b;
-    --aux-0-color: #85bde4;
-    --aux-1-color: #c7bad9;
-    --aux-2-color: #f2cee9;
-    --aux-3-color: #dbd879;
-    --aux-4-color: #d8821d;
     --text-light: white;
     --text-dark: black;
-
 }
