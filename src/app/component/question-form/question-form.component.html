@@ -1,8 +1,9 @@
 <div class="container">
     <question [color]="listColorMain[indexColor].colorMain"></question>
+    <answer *ngFor="let answer of question?.answer; let i = index"  (click)="clickAnswer(i)" [color]="listColorMain[indexColor]"></answer>
+    <!-- <answer (click)="clickAnswer(1)" [color]="listColorMain[indexColor]"></answer>
     <answer [color]="listColorMain[indexColor]"></answer>
-    <answer [color]="listColorMain[indexColor]"></answer>
-    <answer [color]="listColorMain[indexColor]"></answer>
+    <answer [color]="listColorMain[indexColor]"></answer> -->
 </div>
 <line-question [listColors]= "listColorLine" [postLine]="indexQuestion + 1" ></line-question>
 <label-next [color]="listColorMain[indexColor].colorMain"></label-next>

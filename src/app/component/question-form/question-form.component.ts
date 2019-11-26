@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ColorService} from './../../service/color.service'
+import { Question } from './../../interface/interfaces';
 
 @Component({
   selector: 'question-form',
@@ -8,21 +9,33 @@ import {ColorService} from './../../service/color.service'
 })
 export class QuestionFormComponent implements OnInit {
 
+  /**
+   * Crear question y answer interfcae pasarlas como pinput
+   * 
+   */
+
   listColorLine: Array<any>;
   listColorMain: Array<any>;
 
   indexQuestion: number = 0;
   indexColor: number = 0;
 
+  @Input()
+  question:Question;
+
   constructor(private colors: ColorService) { }
 
   ngOnInit() {
     this.init();
   }
-
+  
   init(){
     this.listColorLine = this.colors.getListColors();
     this.listColorMain = this.colors.getListMainColors();
+  }
+
+  clickAnswer(index: number){
+    
   }
 
 }

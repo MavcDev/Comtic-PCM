@@ -1,5 +1,5 @@
 <div [ngStyle]="{'background-color': color?.colorMain}" class="btn-select">
-    <div class="btn-select-center">
+    <div [ngStyle]="{'background-color': isSelect ? color?.colorSelect : 'white'}" class="btn-select-center">
     </div>
 </div>
 <div class="text">
