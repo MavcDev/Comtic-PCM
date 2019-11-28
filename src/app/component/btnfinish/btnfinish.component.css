@@ -1,6 +1,6 @@
 .container{
     position: absolute;
-    right: 5%;
+    right: 4%;
     bottom: 7em;
     height: 3.5em;
     width: 12em;
@@ -11,19 +11,7 @@
     background-image: url('src/assets/play/btn-next.png');
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
-    .container{
-        bottom: 5em;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .container{
-        bottom: 5em;
-    }
-}
-
-@media (max-width: 900px) and (max-height: 785px){
+@media (max-width: 900px){
     .container{
         position: relative;
         margin-left: auto;

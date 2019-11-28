@@ -1,10 +1,11 @@
 :host{
     display: flex;
     width: 50%;
-    height: 10em;
+    height: 6em;
     position: relative;
     align-items: center;
     background-color: aliceblue;
+    padding: 0.5em;
 }
 
 .btn-select{
@@ -36,18 +37,16 @@
     color: var(--text-dark);
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (max-width: 900px){
     :host{
-        height: 7em;
-    }
-
-    .text{
-        font-size: 1em;
+        width: 90%;
+        height: auto;
     }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 900px) and (max-width: 1080px){
     :host{
-        height: 8em;
+        width: 60%;
+        height: auto;
     }
 }

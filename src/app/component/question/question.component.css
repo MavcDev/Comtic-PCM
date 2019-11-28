@@ -37,116 +37,18 @@
     text-align: right;
 }
 
-/** Movil */
-@media (min-width: 0px) and (max-width: 600px) and  (min-height: 785px) {
+@media (max-width: 900px){
     .container{
-        width: 80%;
-        background-color: teal;
-    }
-
-    .bar-top{
-        height: 1.5em;
-    }
-
-    .bar-bottom{
-        height: 5em;
-    }
-
-    .text-bar-top{
-        font-size: 1em;
-    }
-
-    .text-bar-bottom{
-        font-size: 1.5em;
-    }
-}
-
-/* tables */
-@media (min-width: 600px) and (max-width: 900px) and (min-height: 850px) {
-    .container{
-        width: 85%;
-        background-color: burlywood;
-    }
-
-    .bar-top{
-        display: flex;
-        height: 3em;
-    }
-    
-    .bar-bottom{
-        height: 6em;
-    }
-
-    .text-bar-top {
-        font-size: 2em;
-    }
-
-    .text-bar-bottom{
         width: 90%;
+        height: auto;
+    }
+
+    .bar-bottom{
+        height: auto;
+        padding: 0.5em;
+    }
+
+    .text-bar-bottom{
         font-size: 2em;
     }
 }
-
-/* @media (min-width: 900px) and (max-height: 768px){
-    .container{
-        width: 80%;
-        background-color: darkmagenta;
-    }
-} */
-
-@media (max-width: 900px) and (max-height: 785px){
-    .container{
-        width: 90%;
-        background-color: red;
-    }
-
-    .bar-top{
-        height: 1.5em;
-    }
-
-    .bar-bottom{
-        height: 5em;
-    }
-
-    .text-bar-top{
-        font-size: 1em;
-    }
-
-    .text-bar-bottom{
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 900px) and (min-height: 600px){
-    .container{
-        background-color: darkmagenta;
-    }
-}
-
-/*@media (min-width: 900px) and (min-height: 768px){
-    .container{
-        background-color: yellow;
-    }
-}
-
-@media (min-width: 1600px) and (min-height: 1024px){
-    .container{
-        background-color: blue;
-    }
-}
-
-@media (min-width: 2000px) and (min-height: 1400px){
-    .container{
-        background-color: brown;
-    }
-}
-
-@media (min-width: 3000px) and (min-height: 2000px){
-    .container{
-        background-color: green;
-    }
-}
-
-@media (min-width: 4000px) and (min-height: 2300px){
-
-}*/

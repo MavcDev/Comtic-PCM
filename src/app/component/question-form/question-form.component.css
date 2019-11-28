@@ -1,30 +1,8 @@
 .container{
-    margin-top: 5em;
+    margin-top: 2%;
 }
 
 answer{
     margin: auto;
-    margin-top: 2em;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-    .container{
-        margin-top: 0em;
-    }
-
-    answer{
-        width: 90%;
-        margin-left: 2em;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .container{
-        margin-top: 0em;
-    }
-
-    answer{
-        width: 90%;
-        margin-left: 2em;
-    }
+    margin-top: 3%;
 }
