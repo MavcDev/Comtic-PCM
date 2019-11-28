@@ -19,7 +19,7 @@ span{
     color: var(--text-dark);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px), (max-height: 950px){
     .container{
         position: relative;
         margin-top: 13em;
