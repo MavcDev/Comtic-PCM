@@ -13,7 +13,7 @@
     display: flex;
     height: 2.5em;
     width: 2.5em;
-    margin-left: 3em !important;
+    margin-left: 1% !important;
     border-radius: 50%;
     background-color: bisque;
     margin-left: -1.5em;
@@ -29,7 +29,14 @@
     background-color: white;
 }
 
-@media (max-width: 900px), (max-height: 950px){
+@media (max-height: 767px) {
+    .container{
+        position: relative;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 865px) and (max-width: 1018px) and (min-height: 768px){
     .container{
         position: relative;
         bottom: 0;

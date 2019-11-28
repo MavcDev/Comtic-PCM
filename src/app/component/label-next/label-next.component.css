@@ -19,7 +19,15 @@ span{
     color: var(--text-dark);
 }
 
-@media (max-width: 900px), (max-height: 950px){
+@media (max-height: 767px){
+    .container{
+        position: relative;
+        margin-top: 13em;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 865px) and (max-width: 1018px) and (min-height: 768px){
     .container{
         position: relative;
         margin-top: 13em;

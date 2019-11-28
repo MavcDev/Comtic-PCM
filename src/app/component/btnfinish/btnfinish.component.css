@@ -4,14 +4,13 @@
     bottom: 7em;
     height: 3.5em;
     width: 12em;
-    background-color: brown;
     cursor: pointer;
     background-repeat: no-repeat;
     background-size: 100% 100%;  
     background-image: url('src/assets/play/btn-next.png');
 }
 
-@media (max-width: 900px), (max-height: 950px){
+@media (max-height: 767px){
     .container{
         position: relative;
         margin-left: auto;
@@ -19,10 +18,10 @@
     }
 }
 
-/* @media (max-height: 950px){
+@media (min-width: 865px) and (max-width: 1018px) and (min-height: 768px){
     .container{
         position: relative;
         margin-left: auto;
         margin-top: -4em;
     }
-} */
+}

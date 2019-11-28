@@ -1,8 +1,14 @@
 .container{
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 answer{
     margin: auto;
     margin-top: 3%;
+}
+
+@media (max-width: 1023px){
+    answer{
+        margin-top: 5%;
+    }
 }

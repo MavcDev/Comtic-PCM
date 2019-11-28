@@ -17,7 +17,7 @@ export class QuestionFormComponent implements OnInit {
   listColorLine: Array<any>;
   listColorMain: Array<any>;
 
-  indexQuestion: number = 0;
+  indexQuestion: number = 14;
   indexColor: number = 0;
 
   @Input()
