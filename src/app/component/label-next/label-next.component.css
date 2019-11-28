@@ -18,3 +18,23 @@ span{
     padding-right: 1em;
     color: var(--text-dark);
 }
+
+@media (min-width: 0px) and (max-width: 600px) {
+    .container{
+        bottom: 10em;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container{
+        bottom: 10em;
+    }
+}
+
+@media (max-width: 900px) and (max-height: 785px){
+    .container{
+        position: relative;
+        margin-top: 11em;
+        margin-left: auto;
+    }
+}

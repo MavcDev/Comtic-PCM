@@ -35,3 +35,19 @@
     cursor: pointer;
     color: var(--text-dark);
 }
+
+@media (min-width: 0px) and (max-width: 600px) {
+    :host{
+        height: 7em;
+    }
+
+    .text{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    :host{
+        height: 8em;
+    }
+}

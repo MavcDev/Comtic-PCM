@@ -1,4 +1,4 @@
-.container{    
+.container{
     position: fixed;
     display: flex;
     width: 100%;
@@ -27,4 +27,12 @@
     width: 0.7em;
     border-radius: 50%;
     background-color: white;
+}
+
+@media (max-width: 900px) and (max-height: 785px){
+    .container{
+        position: relative;
+        bottom: 0;
+        margin-top: -3em;
+    }
 }
