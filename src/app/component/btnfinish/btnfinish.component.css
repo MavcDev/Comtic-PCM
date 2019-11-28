@@ -18,7 +18,7 @@
     }
 }
 
-@media (min-width: 865px) and (max-width: 1018px) and (min-height: 768px){
+@media (min-width: 865px) and (max-width: 1024px) and (min-height: 768px){
     .container{
         position: relative;
         margin-left: auto;

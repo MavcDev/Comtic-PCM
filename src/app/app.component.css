@@ -3,3 +3,37 @@
     --text-light: white;
     --text-dark: black;
 }
+
+/*
+    ponerla en la pgina donde se haga el componnete question foprm
+*/
+
+@media (max-width: 1150px) { 
+    :host { 
+        zoom: 95%; 
+    } 
+}
+
+@media (max-width: 1000px) { 
+    :host  { 
+        zoom: 90%; 
+    } 
+}
+
+@media (max-width: 950px) { 
+    :host  { 
+        zoom: 80%; 
+    } 
+}
+
+@media(min-width: 1200px) and (min-height: 1080px)  {
+    :host  { 
+        zoom: 120%;
+    } 
+}
+
+@media(min-width: 2550px) and (min-height: 1440px)  {
+    :host  { 
+        zoom: 150%;
+    } 
+}
