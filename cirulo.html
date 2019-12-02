@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var posColor = 0;
+var angleColor = [70, 70, 70, 70, 70];
+/*
+    20: rosado oscuro
+    90: naranja
+    160: verder 
+    230: azul
+    305: morado
+*/
+
+
+
+c.addEventListener("touchend", function(event){
+   // angleColor[0]= 75;
+    posColor++;
+    posColor = posColor % 5;
+    console.log("Event " + posColor);
+    draw(85);
+}, false);
+
+draw(0);
+
+function draw(angle){
+    
+    ctx.clearRect(0, 0, 500, 500);
+
+    ctx.translate(250, 250);
+    ctx.rotate(angle * Math.PI / 180);
+    ctx.translate(-250, -250);
+
+    ctx.beginPath();
+    ctx.moveTo(500/2, 500/2);
+    ctx.arc(500/2, 500/2, 250, 0, (72 * Math.PI/180), false);
+    ctx.closePath();
+    ctx.fillStyle = "#4891bb";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(500/2, 500/2);
+    ctx.arc(500/2, 500/2, 250, (72 * Math.PI/180), (144 * Math.PI/180), false);
+    ctx.closePath();
+    ctx.fillStyle = "#97991e";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(500/2, 500/2);
+    ctx.arc(500/2, 500/2, 250, (144 * Math.PI/180), (216 * Math.PI/180), false);
+    ctx.closePath();
+    ctx.fillStyle = "#c4640e";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(500/2, 500/2);
+    ctx.arc(500/2, 500/2, 250, (216 * Math.PI/180), (288 * Math.PI/180), false);
+    ctx.closePath();
+    ctx.fillStyle = "#b548a5";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(500/2, 500/2);
+    ctx.arc(500/2, 500/2, 250, (288 * Math.PI/180), (360 * Math.PI/180), false);
+    ctx.closePath();
+    ctx.fillStyle = "#644684";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500/2, 500/2, 167, 0, 2 * Math.PI, false);
+    ctx.closePath();
+    ctx.fillStyle = "#ffffff59";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500/2, 500/2, 83, 0, 2 * Math.PI, false);
+    ctx.closePath();
+    ctx.fillStyle = "#ffffff59";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(500/2, 500/2, 15, 0, 2 * Math.PI, false);
+    ctx.closePath();
+    ctx.fillStyle = "#b2b2b2";
+    ctx.stroke();
+    ctx.fill();
+
+    /*
+        pos rosa inicia
+        
+    */
+
+    // puntos
+    drawPoint(ctx, 185,50);
+    drawPoint(ctx, 210,130);
+    drawPoint(ctx, 236,210); 
+
+    ctx.beginPath(); 
+
+    //Rosado
+     //ctx.moveTo(500/2, 500/2);
+     //ctx.lineTo(185,10); /* top validacion  */
+    // ctx.lineTo(185,50); /* Alto */
+    // ctx.lineTo(210,130); /* Medio */
+    // ctx.lineTo(236,210); /* Bajo */
+
+    // Morado
+    ctx.moveTo(500/2, 500/2);
+    ctx.lineTo(450,100); /* top validacion  */
+    ctx.lineTo(185,50); /* Alto */
+    // ctx.lineTo(210,130); /* Medio */
+    // ctx.lineTo(236,210); /* Bajo */
+
+    ctx.stroke();
+
+    // ctx.translate(250, 250);
+    // ctx.rotate(angle * Math.PI / 180);
+    // ctx.translate(-250, -250);
+
+}
+
+function drawPoint(ctx, x, y){
+    ctx.beginPath();
+    ctx.arc(x, y, 10, 0, 2 * Math.PI, false);
+    ctx.closePath();
+    ctx.fillStyle = "gray";
+    ctx.stroke();
+    ctx.fill();
+}
+
+</script>
+
+<p><strong>Note:</strong> The canvas tag is not supported in Internet 
+Explorer 8 and earlier versions.</p>
+
+</body>
+</html>
