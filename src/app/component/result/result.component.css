@@ -13,7 +13,7 @@
 }
 
 .chart-point{
-    background-color: cyan;
+    /* background-color: cyan; */
     position: absolute;
     bottom: 1em;
     right: 1em;
@@ -29,11 +29,9 @@
     height: 48%;
 }
 
-.chart-circle{
-    background-color: beige;
-    width: 30em;
-    height: 30em;
+/* .chart-circle{
+    width: 500px;
+    height: 500px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
-}
+} */

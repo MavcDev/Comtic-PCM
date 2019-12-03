@@ -98,10 +98,30 @@ function draw(angle){
         
     */
 
-    // puntos
-    drawPoint(ctx, 185,50);
-    drawPoint(ctx, 210,130);
-    drawPoint(ctx, 236,210); 
+    // puntos rosados
+    drawPoint(ctx, 185,50); // alto
+    drawPoint(ctx, 210,130); // medio
+    drawPoint(ctx, 236,210); // bajo
+
+    // puntos Morados
+    drawPoint(ctx, 425, 120); // alto
+    drawPoint(ctx, 350,175); // medio
+    drawPoint(ctx, 290,220); // bajo
+
+    // puntos azul
+    drawPoint(ctx, 425, 381); // alto
+    drawPoint(ctx, 350,325); // medio
+    drawPoint(ctx, 290,280); // bajo
+
+    // puntos verde
+    drawPoint(ctx, 180, 455); // alto
+    drawPoint(ctx, 210, 370); // medio
+    drawPoint(ctx, 235, 295); // bajo
+
+    // puntod naranjas
+    drawPoint(ctx, 35, 250); // alto
+    drawPoint(ctx, 120, 250); // medio
+    drawPoint(ctx, 200, 250); // bajo
 
     ctx.beginPath(); 
 
@@ -113,11 +133,32 @@ function draw(angle){
     // ctx.lineTo(236,210); /* Bajo */
 
     // Morado
-    ctx.moveTo(500/2, 500/2);
-    ctx.lineTo(450,100); /* top validacion  */
-    ctx.lineTo(185,50); /* Alto */
-    // ctx.lineTo(210,130); /* Medio */
-    // ctx.lineTo(236,210); /* Bajo */
+    //ctx.moveTo(500/2, 500/2);
+    //ctx.lineTo(450,100); /* top validacion  */
+    //ctx.lineTo(425, 119); /* Alto */
+    //ctx.lineTo(350,175); /* Medio */
+    //ctx.lineTo(290,220); /* Bajo */
+
+    // Azul
+    //ctx.moveTo(500/2, 500/2);
+    //ctx.lineTo(450,400); /* top validacion  */
+    //ctx.lineTo(425, 381); /* Alto */
+    //ctx.lineTo(350,325); /* Medio */
+    //ctx.lineTo(290,280); /* Bajo */
+
+    // Verde
+    //ctx.moveTo(500/2, 500/2);
+    //ctx.lineTo(170,485); /* top validacion  */
+    //ctx.lineTo(180, 455); /* Alto */
+    //ctx.lineTo(210, 370); /* Medio */
+    //ctx.lineTo(235,295); /* Bajo */
+
+    // Naranjas
+    //ctx.moveTo(500/2, 500/2);
+    //ctx.lineTo(0, 250); /* top validacion  */
+    //ctx.lineTo(35, 250); /* Alto */
+    //ctx.lineTo(130, 250); /* Medio */
+    //ctx.lineTo(200, 250); /* Bajo */
 
     ctx.stroke();
 

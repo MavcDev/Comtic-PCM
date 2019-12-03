@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ColorService} from './../../service/color.service'
+import {ColorService} from './../../service/color.service';
 import { Question } from './../../interface/interfaces';
 
 @Component({

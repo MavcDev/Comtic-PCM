@@ -19,6 +19,7 @@ export class BarInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,16 +1,14 @@
 <div>
     <div class="img-main">
-        <img-base></img-base>
+        <img-base [src]="dataPoints[index].img" ></img-base>
     </div>
 
     <div class="bar-desc">
-        <bar-info></bar-info>
+        <bar-info [title]="dataPoints[index].title" [content]="dataPoints[index].text" [color]="dataPoints[index].color.colorMain" ></bar-info>
     </div>
 
     <div class="chart-point">
-        <div class="chart-circle">
-
-        </div>
+        <chart-data [dataPoint]="dataPointResult"></chart-data>
     </div>
 
     <div class="content-chart">

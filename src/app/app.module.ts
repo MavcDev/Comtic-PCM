@@ -14,6 +14,7 @@ import { ResultComponent } from './component/result/result.component';
 import { BarInfoComponent } from './component/bar-info/bar-info.component';
 import { ImgBaseComponent } from './component/img-base/img-base.component';
 import { ChartInfoComponent } from './component/chart-info/chart-info.component';
+import { ChartDataComponent } from './component/chart-data/chart-data.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ChartInfoComponent } from './component/chart-info/chart-info.component'
     ResultComponent,
     BarInfoComponent,
     ImgBaseComponent,
-    ChartInfoComponent
+    ChartInfoComponent,
+    ChartDataComponent
   ],
   imports: [
     BrowserModule,
