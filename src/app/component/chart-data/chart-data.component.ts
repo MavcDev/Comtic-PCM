@@ -47,7 +47,7 @@ export class ChartDataComponent implements AfterViewInit  {
     this.cx.clearRect(0, 0, 500, 500);
 
     this.cx.translate(250, 250);
-    this.cx.rotate(20 * Math.PI / 180);
+    this.cx.rotate(17 * Math.PI / 180);
     this.cx.translate(-250, -250);
 
     var ini = 0;

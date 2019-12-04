@@ -13,7 +13,6 @@
 }
 
 .chart-point{
-    /* background-color: cyan; */
     position: absolute;
     bottom: 1em;
     right: 1em;
@@ -22,16 +21,52 @@
 }
 
 .content-chart{
-    background-color: darkorchid;
     position: absolute;
     right: 1em;
     width: 59%;
     height: 48%;
 }
 
-/* .chart-circle{
-    width: 500px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-} */
+@media(max-width: 1240px) and (max-height: 768px)  {
+    :host  { 
+        zoom: 75%;
+    } 
+}
+
+@media(min-width: 1950px) and (min-height: 1070px)  {
+    :host  { 
+        zoom: 125%;
+    } 
+
+    .chart-point{
+        background-color: crimson;
+    }
+}
+
+@media(max-width: 935px) and (max-height: 750px), (max-width: 935px) and  (min-height: 768px){
+    .img-main{
+        display: block;
+        position: relative;
+        width: 30em;
+        height: auto;
+        margin: auto;
+    }
+
+    .content-chart{
+        position: relative;
+        margin-left: auto;
+    }
+
+    .chart-point{
+        position: relative;
+        margin-left: auto;
+        height: 24em;
+        width: 100%;
+    }
+
+    .bar-desc{
+        position: relative;
+        width: 95%;
+    }
+    
+}

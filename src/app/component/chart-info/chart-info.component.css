@@ -1,0 +1,15 @@
+
+img{
+    position: absolute;
+    right: 6em;
+    bottom: -2.5em;
+    z-index: -999;
+
+}
+
+@media(max-width: 935px) and (max-height: 750px), (max-width: 935px) and  (min-height: 750px) {
+    img{
+        position: relative;
+        right: 12.5em;
+    }
+}

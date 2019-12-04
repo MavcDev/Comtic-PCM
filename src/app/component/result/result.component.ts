@@ -17,9 +17,9 @@ export class ResultComponent implements OnInit {
   ngOnInit() {
     this.addPoints();
     this.dataPointResult.push(
-      this.dataPoints[0].point[1],
-      this.dataPoints[1].point[1],
-      this.dataPoints[2].point[2],
+      this.dataPoints[0].point[2],
+      this.dataPoints[1].point[2],
+      this.dataPoints[2].point[1],
       this.dataPoints[3].point[1],
       this.dataPoints[4].point[0]
     );
@@ -33,7 +33,7 @@ export class ResultComponent implements OnInit {
         title: 'Competencia Tecnológica',
         text: 'Capacidad para seleccionar y utilizar de forma pertinente, responsable y eficiente una variedad de herramientas tecnológicas entendiendo los principios que las rigen, la forma de combinarlas y las licencias que las amparan.',
         img: './assets/result/tecnologico.png',
-        imgData: '',
+        imgData: './assets/result/CTecnologica.png',
         point: [
           {x: 236, y: 210},
           {x: 210, y: 130},
@@ -46,7 +46,7 @@ export class ResultComponent implements OnInit {
         title: 'Competencia Comunicativa',
         text: 'Capacidad para expresarse, establecer contacto y relacionarse en espacios virtuales y audiovisuales a través de diversos medios y con el manejo de multiples lenguajes, de manera sincrónica y asincrónica.',
         img: './assets/result/comunicativa.png',
-        imgData: '',
+        imgData: './assets/result/CComunicativa.png',
         point: [
           {x: 290, y: 220},
           {x: 350, y: 175},
@@ -59,7 +59,7 @@ export class ResultComponent implements OnInit {
         title: 'Competencia Investigativa',
         text: 'Capacidad de utilizar las TIC para la transformación del saber y la generación de nuevos conocimientos.',
         img: './assets/result/investigativa.png',
-        imgData: '',
+        imgData: './assets/result/CInvestigativa.png',
         point: [
           {x: 290, y: 280},
           {x: 350, y: 325},
@@ -72,7 +72,7 @@ export class ResultComponent implements OnInit {
         title: 'Competencia de Gestión',
         text: 'Capacidad de utilizar las TIC para la transformación del saber y la generación de nuevos conocimientos.',
         img: './assets/result/gestion.png',
-        imgData: '',
+        imgData: './assets/result/CGestion.png',
         point: [
           {x: 235, y: 295},
           {x: 210, y: 370},
@@ -85,7 +85,7 @@ export class ResultComponent implements OnInit {
         title: 'Competencia Pedagógica',
         text: 'Capacidad de utilizar las TIC para fortalecer los procesos de enseñanza y aprendizaje, reconociendo alcances y limitaciones de la incorporación de estas tecnologías en la formación integral de los estudiantes y en su propio desarrollo profesional.',
         img: './assets/result/pedagogica.png',
-        imgData: '',
+        imgData: './assets/result/CPedagogica.png',
         point: [
           {x: 200, y: 250},
           {x: 120, y: 250},

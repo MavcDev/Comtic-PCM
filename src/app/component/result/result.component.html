@@ -2,15 +2,16 @@
     <div class="img-main">
         <img-base [src]="dataPoints[index].img" ></img-base>
     </div>
-
-    <div class="bar-desc">
-        <bar-info [title]="dataPoints[index].title" [content]="dataPoints[index].text" [color]="dataPoints[index].color.colorMain" ></bar-info>
+    
+    <div class="content-chart">
+        <chart-info [src]="dataPoints[index].imgData"></chart-info>
     </div>
 
     <div class="chart-point">
-        <chart-data [dataPoint]="dataPointResult"></chart-data>
-    </div>
+            <chart-data [dataPoint]="dataPointResult"></chart-data>
+        </div>
 
-    <div class="content-chart">
+    <div class="bar-desc">
+        <bar-info [title]="dataPoints[index].title" [content]="dataPoints[index].text" [color]="dataPoints[index].color.colorMain" ></bar-info>
     </div>
 </div>
