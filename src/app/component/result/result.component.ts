@@ -95,4 +95,30 @@ export class ResultComponent implements OnInit {
     );
   }
 
+  nextItem(indexChart){
+
+    switch(indexChart){
+      case 3: 
+        this.index = 0;
+      break;
+
+      case 4: 
+        this.index = 1;
+      break;
+
+      case 0: 
+        this.index = 2;
+      break;
+
+      case 1: 
+        this.index = 3;
+      break;
+
+      case 2: 
+        this.index = 4;
+      break;
+    }
+
+    // console.log(indexChart);
+  }
 }

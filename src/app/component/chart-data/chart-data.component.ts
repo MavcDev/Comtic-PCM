@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'chart-data',
@@ -6,8 +6,6 @@ import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input } from '
   styleUrls: ['./chart-data.component.css']
 })
 export class ChartDataComponent implements AfterViewInit  {
-
-  @ViewChild('canvas', {static: false}) public canvas: ElementRef;
 
   cx: CanvasRenderingContext2D;
   dataPoints: any = [];
@@ -18,11 +16,18 @@ export class ChartDataComponent implements AfterViewInit  {
     "#b548a5",
     "#644684"
   ];
+
+  angle: number = 17;
+  index: number = 3;
+
+  @ViewChild('canvas', {static: false}) public canvas: ElementRef;
   
   @Input()
   set dataPoint(data:any){
     this.dataPoints = data;
   }
+
+  @Output() clickChartNext = new EventEmitter<number>();
 
   constructor() { }
 
@@ -35,6 +40,17 @@ export class ChartDataComponent implements AfterViewInit  {
     this.cx = canvasEl.getContext('2d');
     canvasEl.width = 500;
     canvasEl.height = 500;
+    canvasEl.addEventListener("touchend", this.clickChart.bind(this), false);
+    canvasEl.addEventListener("click", this.clickChart.bind(this), false);
+    this.draw();
+  }
+
+  clickChart(event){
+    // this.angle = -72;
+    this.angle = -72;
+    this.index++;
+    this.index = this.index % 5;
+    this.clickChartNext.emit(this.index);
     this.draw();
   }
 
@@ -47,7 +63,7 @@ export class ChartDataComponent implements AfterViewInit  {
     this.cx.clearRect(0, 0, 500, 500);
 
     this.cx.translate(250, 250);
-    this.cx.rotate(17 * Math.PI / 180);
+    this.cx.rotate(this.angle * Math.PI / 180);
     this.cx.translate(-250, -250);
 
     var ini = 0;

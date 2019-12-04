@@ -33,13 +33,9 @@
     } 
 }
 
-@media(min-width: 1950px) and (min-height: 1070px)  {
+@media(min-width: 1000px) and (min-height: 1000px)  {
     :host  { 
         zoom: 125%;
-    } 
-
-    .chart-point{
-        background-color: crimson;
     }
 }
 
