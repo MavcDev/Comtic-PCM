@@ -1,13 +1,11 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'answer',
   templateUrl: './answer.component.html',
   styleUrls: ['./answer.component.css']
 })
-export class AnswerComponent implements OnInit
-// , OnChanges 
-{
+export class AnswerComponent implements OnInit {
 
   @Input()
   color: any;
@@ -19,8 +17,4 @@ export class AnswerComponent implements OnInit
 
   ngOnInit() {
   }
-
-  // ngOnChanges(changes: SimpleChanges){
-    
-  // }
 }

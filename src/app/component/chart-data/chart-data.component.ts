@@ -79,41 +79,6 @@ export class ChartDataComponent implements AfterViewInit  {
       end += 72;
     });
 
-    /*this.cx.beginPath();
-    this.cx.moveTo(500/2, 500/2);
-    this.cx.arc(500/2, 500/2, 250, 0, this.getDegrees(72), false);
-    this.cx.closePath();
-    this.cx.fillStyle = "#4891bb";
-    this.cx.fill();
-
-    this.cx.beginPath();
-    this.cx.moveTo(500/2, 500/2);
-    this.cx.arc(500/2, 500/2, 250,this.getDegrees(72), this.getDegrees(144), false);
-    this.cx.closePath();
-    this.cx.fillStyle = "#97991e";
-    this.cx.fill();
-
-    this.cx.beginPath();
-    this.cx.moveTo(500/2, 500/2);
-    this.cx.arc(500/2, 500/2, 250, this.getDegrees(144), this.getDegrees(216), false);
-    this.cx.closePath();
-    this.cx.fillStyle = "#c4640e";
-    this.cx.fill();
-
-    this.cx.beginPath();
-    this.cx.moveTo(500/2, 500/2);
-    this.cx.arc(500/2, 500/2, 250, this.getDegrees(216), this.getDegrees(288), false);
-    this.cx.closePath();
-    this.cx.fillStyle = "#b548a5";
-    this.cx.fill();
-
-    this.cx.beginPath();
-    this.cx.moveTo(500/2, 500/2);
-    this.cx.arc(500/2, 500/2, 250, this.getDegrees(288), this.getDegrees(360), false);
-    this.cx.closePath();
-    this.cx.fillStyle = "#644684";
-    this.cx.fill();*/
-
     this.cx.beginPath();
     this.cx.arc(500/2, 500/2, 167, 0, 2 * Math.PI, false);
     this.cx.closePath();

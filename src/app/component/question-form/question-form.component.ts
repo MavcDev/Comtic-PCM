@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {ColorService} from './../../service/color.service';
 import { Question } from './../../interface/interfaces';
 
@@ -9,19 +9,21 @@ import { Question } from './../../interface/interfaces';
 })
 export class QuestionFormComponent implements OnInit {
 
-  /**
-   * Crear question y answer interfcae pasarlas como pinput
-   * 
-   */
-
   listColorLine: Array<any>;
   listColorMain: Array<any>;
+  selectAnswer: Array<boolean> = [false, false, false];
+  indexAnswer: number = -1;
 
-  indexQuestion: number = 14;
+  @Input()
+  indexQuestion: number = 0;
+
+  @Input()
   indexColor: number = 0;
 
   @Input()
   question:Question;
+
+  @Output() clickNextQuestion = new EventEmitter<number>();
 
   constructor(private colors: ColorService) { }
 
@@ -35,7 +37,30 @@ export class QuestionFormComponent implements OnInit {
   }
 
   clickAnswer(index: number){
-    
+    this.selectAnswer.fill(false);
+    this.selectAnswer[index] =  true;
+    this.indexAnswer = index;
   }
 
+  clickNext(){
+    if(!this.validateSelectQuestion()){
+      alert("Debe selecionar al menos una de las opciones.");
+      return;
+    }
+
+    this.clickNextQuestion.emit(this.indexAnswer);
+    this.restart();
+  }
+
+  validateSelectQuestion(){
+    let isSelect = this.selectAnswer.find(elm => {
+      return elm == true;
+    });
+    return (isSelect);
+  }
+
+  restart(){
+    this.selectAnswer.fill(false);
+    this.indexAnswer = -1;
+  }
 }
