@@ -1,0 +1,54 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: table;
+}
+
+.content{
+    width: 30em;
+    /* position: absolute; */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo{
+    width: 30em;
+    height: 30em;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    background-image: url('src/assets/play/logo.png');
+}
+
+.btn{
+    width: 25em;
+    height: 3em;
+    background-color: #bec023;
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 1em;
+    display: table;
+    cursor: pointer;
+}
+
+span{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 2em;
+}
+
+.info{
+    width: 5em;
+    height: 5em;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}

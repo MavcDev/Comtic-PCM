@@ -34,4 +34,15 @@
     font-size: 1.5em;
     margin-right: 1em;
     text-align: right;
+
+    padding: 0.5em;
+    border: 2px solid white;
+    border-radius: 0.5em;
+}
+
+@media (max-width: 1600px){
+    .bar-bottom{
+        height: auto;
+        padding: 1em;
+    }
 }
