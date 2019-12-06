@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ColorService } from './../../service/color.service';
 import { fadeBasic } from '../../animation';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'result',
@@ -23,16 +24,9 @@ export class ResultComponent implements OnInit {
 
   dataPointResult: any = [];
   
-  constructor(private colors: ColorService) { }
+  constructor(private colors: ColorService, private router: Router) { }
 
   ngOnInit() {
-    // this.dataPointResult.push(
-    //   this.dataPoints[0].point[2],
-    //   this.dataPoints[1].point[2],
-    //   this.dataPoints[2].point[1],
-    //   this.dataPoints[3].point[1],
-    //   this.dataPoints[4].point[0]
-    // );
   }
 
   addPoints(){
@@ -133,5 +127,9 @@ export class ResultComponent implements OnInit {
     this.addPoints();
     for(let i = 0; i < dataPoint.length; i++)
       this.dataPointResult.push( this.dataPoints[i].point[dataPoint[i]] );
+  }
+
+  toHome(){
+    this.router.navigate(['/home']);
   }
 }

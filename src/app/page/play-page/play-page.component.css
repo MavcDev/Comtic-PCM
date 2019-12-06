@@ -1,6 +1,7 @@
-/*
-    ponerla en la pgina donde se haga el componnete question foprm
-*/
+
+div{
+    font-family: 'Roboto', sans-serif;
+}
 
 @media (max-width: 1150px) { 
     :host { 

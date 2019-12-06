@@ -27,6 +27,20 @@
     height: 48%;
 }
 
+.btn-home{
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    background-image: url('src/assets/play/home.svg');
+}
+
 @media(max-width: 1240px) and (max-height: 768px)  {
     :host  { 
         zoom: 75%;
