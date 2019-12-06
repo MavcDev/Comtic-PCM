@@ -9,6 +9,7 @@ import { PlayDataService } from './../../service/play-data.service'
 })
 export class PlayPageComponent implements OnInit {
 
+  isLoader: boolean = false;
   isFinishQuestion: boolean = false;
   questionList: Array<Question>;
   questionMain: Question;
@@ -25,9 +26,9 @@ export class PlayPageComponent implements OnInit {
   }
 
   async init(){
-    // cargar los datos
     this.questionList = await this.playService.getQuestion();
     this.questionMain = this.questionList[0];
+    this.isLoader = true;
   }
 
   nextQuestion(indexAnswer: number){
@@ -36,8 +37,7 @@ export class PlayPageComponent implements OnInit {
     this.indexQuestion++;
 
     if(this.indexQuestion >= 15){
-      console.log(this.scoreCategory);
-      this.calculatedValueCategory();      
+      this.calculatedValueCategory();
       this.isFinishQuestion = true;
       return;
     }

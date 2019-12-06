@@ -110,12 +110,34 @@ export class ChartDataComponent implements AfterViewInit  {
 
     this.cx.beginPath();
     this.cx.arc(500/2, 500/2, 15, 0, 2 * Math.PI, false);
-    this.cx.closePath();
     this.cx.fillStyle = "#b2b2b2";
     this.cx.lineWidth = 5;
     this.cx.strokeStyle = '#717171';
     this.cx.stroke();
     this.cx.fill();
+    this.cx.closePath();
+
+    this.cx.beginPath();
+    this.cx.arc(135, 130, 60,  (200 * Math.PI/180), (250 * Math.PI/180), false);
+    this.cx.fillStyle = "#4891bb";
+    this.cx.stroke();
+    this.cx.closePath();
+
+    
+    this.cx.beginPath();
+    this.cx.moveTo(93, 103);
+    this.cx.lineTo(78.5, 110);
+    this.cx.lineTo(75, 95);
+    this.cx.stroke();
+    this.cx.closePath();
+
+    this.cx.save();
+    this.cx.translate(15, 80);
+    this.cx.rotate(-45 * Math.PI/180);
+    this.cx.font = "16px sans-serif";
+    this.cx.fillStyle = "black";
+    this.cx.fillText("Click", 40,55);
+    this.cx.restore();
 
     this.drawPoints();
   }  

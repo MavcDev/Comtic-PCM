@@ -14,6 +14,8 @@ export class QuestionFormComponent implements OnInit {
   selectAnswer: Array<boolean> = [false, false, false];
   indexAnswer: number = -1;
 
+  classAnimation: string = "";
+
   @Input()
   indexQuestion: number = 0;
 
@@ -40,6 +42,7 @@ export class QuestionFormComponent implements OnInit {
     this.selectAnswer.fill(false);
     this.selectAnswer[index] =  true;
     this.indexAnswer = index;
+    this.classAnimation = "pulse-btn-next";
   }
 
   clickNext(){
@@ -62,5 +65,6 @@ export class QuestionFormComponent implements OnInit {
   restart(){
     this.selectAnswer.fill(false);
     this.indexAnswer = -1;
+    this.classAnimation = "";
   }
 }
