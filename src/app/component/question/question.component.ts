@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Question } from 'src/app/interface/interfaces';
 
 @Component({
   selector: 'question',
@@ -9,6 +10,9 @@ export class QuestionComponent implements OnInit {
 
   @Input()
   color: any;
+
+  @Input()
+  question: Question;
 
   constructor() { }
 

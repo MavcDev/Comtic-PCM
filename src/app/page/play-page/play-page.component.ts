@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from 'src/app/interface/interfaces';
+import { PlayDataService } from './../../service/play-data.service'
 
 @Component({
   selector: 'play-page',
@@ -17,23 +18,27 @@ export class PlayPageComponent implements OnInit {
   answerQuestion: Array<number> = []
   resultQuestion: Array<number> = [0, 0, 0, 0, 0]
 
-  constructor() { }
+  constructor(private playService: PlayDataService) { }
 
   ngOnInit() {
+    this.init();
   }
 
-  init(){
+  async init(){
     // cargar los datos
+    this.questionList = await this.playService.getQuestion();
+    this.questionMain = this.questionList[0];
   }
 
   nextQuestion(indexAnswer: number){
     this.answerQuestion.push(indexAnswer);
-    //this.scoreCategory[this.indexColor] += this.questionMain.answer[indexAnswer].score;
+    this.scoreCategory[ this.getIndexCategory(this.questionMain.category) ] += this.questionMain.answer[indexAnswer].score;
     this.indexQuestion++;
 
-    if(this.indexQuestion >= 15){      
+    if(this.indexQuestion >= 15){
+      console.log(this.scoreCategory);
+      this.calculatedValueCategory();      
       this.isFinishQuestion = true;
-      this.calculatedValueCategory();
       return;
     }
 
@@ -45,7 +50,7 @@ export class PlayPageComponent implements OnInit {
 
   calculatedValueCategory(){
     for(var i = 0; i < this.scoreCategory.length; i++){
-      let media =  this.questionList.length / this.scoreCategory[i];
+      let media =  9 / this.scoreCategory[i];
       let pos = 0;
       if(media >= 1 && media < 1.5)
         pos = 2;
@@ -53,6 +58,16 @@ export class PlayPageComponent implements OnInit {
         pos = 1;
       
       this.resultQuestion[i] = pos;
+    }
+  }
+
+  getIndexCategory(id: number){
+    switch(id){
+      case 9: return 0;
+      case 6: return 1;
+      case 7: return 2;
+      case 8: return 3;
+      case 10: return 4;
     }
   }
 }

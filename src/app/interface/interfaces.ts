@@ -9,5 +9,5 @@ export interface Question{
     id: number,
     text: string,
     answer: Array<Answer>,
-    isSelect: boolean
+    category: number
 }

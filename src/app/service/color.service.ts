@@ -44,7 +44,8 @@ export class ColorService {
    * Colores del estilo de la tematicas
    */
   getListMainColors(){
-    return this.shuffleArray(this.colorMain);
+    let auxColorMain = this.colorMain.slice();
+    return this.shuffleArray(auxColorMain);
   }
 
   shuffleArray(arra: Array<any>){

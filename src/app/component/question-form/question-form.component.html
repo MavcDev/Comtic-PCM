@@ -1,10 +1,6 @@
 <div class="container">
-    <question [color]="listColorMain[indexColor].colorMain"></question>
-    <!-- <answer *ngFor="let answer of question?.answer; let i = index"  (click)="clickAnswer(i)" [isSelect]="selectAnswer[i]" [color]="listColorMain[indexColor]"></answer> -->
-    <answer (click)="clickAnswer(0)" [isSelect]="selectAnswer[0]" [color]="listColorMain[indexColor]"></answer>
-    <answer  (click)="clickAnswer(1)" [isSelect]="selectAnswer[1]" [color]="listColorMain[indexColor]"></answer>
-    <answer  (click)="clickAnswer(2)" [isSelect]="selectAnswer[2]" [color]="listColorMain[indexColor]"></answer>
-
+    <question  [question]="question" [color]="listColorMain[indexColor].colorMain"></question>
+    <answer *ngFor="let answer of question?.answer; let i = index" [answer]="answer"  (click)="clickAnswer(i)" [isSelect]="selectAnswer[i]" [color]="listColorMain[indexColor]"></answer>
     <label-next [color]="listColorMain[indexColor].colorMain"></label-next>
     <btnfinish (click)="clickNext()" ></btnfinish>
     <line-question [listColors]= "listColorLine" [postLine]="indexQuestion + 1" ></line-question>

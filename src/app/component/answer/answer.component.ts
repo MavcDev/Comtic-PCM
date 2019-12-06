@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Answer } from 'src/app/interface/interfaces';
 
 @Component({
   selector: 'answer',
@@ -12,6 +13,9 @@ export class AnswerComponent implements OnInit {
 
   @Input()
   isSelect: boolean;
+
+  @Input()
+  answer: Answer;
 
   constructor() { }
 
