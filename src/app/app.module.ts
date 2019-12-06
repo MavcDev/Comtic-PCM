@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -16,6 +17,7 @@ import { BarInfoComponent } from './component/bar-info/bar-info.component';
 import { ImgBaseComponent } from './component/img-base/img-base.component';
 import { ChartInfoComponent } from './component/chart-info/chart-info.component';
 import { ChartDataComponent } from './component/chart-data/chart-data.component';
+import { HomePageComponent } from './page/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +33,13 @@ import { ChartDataComponent } from './component/chart-data/chart-data.component'
     BarInfoComponent,
     ImgBaseComponent,
     ChartInfoComponent,
-    ChartDataComponent
+    ChartDataComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
   ],
   providers: [],

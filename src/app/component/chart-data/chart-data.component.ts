@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'chart-data',
@@ -6,6 +7,8 @@ import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, Input, Output,
   styleUrls: ['./chart-data.component.css']
 })
 export class ChartDataComponent implements AfterViewInit  {
+
+  subCountTime: any;
 
   cx: CanvasRenderingContext2D;
   dataPoints: any = [];
@@ -17,6 +20,7 @@ export class ChartDataComponent implements AfterViewInit  {
     "#644684"
   ];
 
+  countAux: number = 0;
   angle: number = 17;
   index: number = 3;
 
@@ -46,12 +50,25 @@ export class ChartDataComponent implements AfterViewInit  {
   }
 
   clickChart(event){
-    // this.angle = -72;
-    this.angle = -72;
+    if(this.subCountTime) return;
+    const countTime = interval(13);
+    this.subCountTime = countTime.subscribe((n)=>{
+      this.angle = -1;
+      this.countAux++;
+      this.draw(); 
+
+      if(this.countAux >= 72){
+        this.countAux = 0;
+        this.subCountTime.unsubscribe();
+        this.subCountTime =  undefined;
+      }
+
+    });
+    
     this.index++;
     this.index = this.index % 5;
     this.clickChartNext.emit(this.index);
-    this.draw();
+    
   }
 
   drawPoints(){

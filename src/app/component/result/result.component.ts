@@ -1,15 +1,20 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ColorService } from './../../service/color.service';
+import { fadeBasic } from '../../animation';
 
 @Component({
   selector: 'result',
   templateUrl: './result.component.html',
-  styleUrls: ['./result.component.css']
+  styleUrls: ['./result.component.css'],
+  animations: [
+    fadeBasic()
+  ]
 })
 export class ResultComponent implements OnInit {
 
   dataPoints: any = [];
   index: number = 0;
+  open: boolean = true;
 
   @Input()
   set dataPoint(dataPoint: Array<number>){

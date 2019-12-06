@@ -1,1 +1,1 @@
-<img [src]="src">
+<img  [@fadeBasic]="open ? 'show' : 'hide'"  (@fadeBasic.done)="endFade($event)" [src]="srcImg" (load)="loadImg()">
