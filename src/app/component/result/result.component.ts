@@ -17,6 +17,8 @@ export class ResultComponent implements OnInit {
   index: number = 0;
   open: boolean = true;
 
+  audioHome: any;
+
   @Input()
   set dataPoint(dataPoint: Array<number>){
     this.loadPointData(dataPoint);
@@ -24,7 +26,9 @@ export class ResultComponent implements OnInit {
 
   dataPointResult: any = [];
   
-  constructor(private colors: ColorService, private router: Router) { }
+  constructor(private colors: ColorService, private router: Router) {
+    this.loadAudio();
+   }
 
   ngOnInit() {
   }
@@ -130,6 +134,11 @@ export class ResultComponent implements OnInit {
   }
 
   toHome(){
+    this.audioHome.play();
     this.router.navigate(['/home']);
+  }
+
+  loadAudio(){
+    this.audioHome = new Audio('assets/song/btnL2.wav');
   }
 }

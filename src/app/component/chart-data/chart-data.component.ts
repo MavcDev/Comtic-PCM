@@ -51,6 +51,10 @@ export class ChartDataComponent implements AfterViewInit  {
 
   clickChart(event){
     if(this.subCountTime) return;
+
+    const audioRoulette = new Audio('assets/song/ruleta.wav');
+    audioRoulette.play();
+
     const countTime = interval(13);
     this.subCountTime = countTime.subscribe((n)=>{
       this.angle = -1;

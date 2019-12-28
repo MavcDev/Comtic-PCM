@@ -8,16 +8,24 @@ import { Router } from "@angular/router";
 })
 export class HomePageComponent implements OnInit {
 
+  audioPlay: any;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.loadAudio();
   }
 
   clickPlay(){
+    this.audioPlay.play();
     this.router.navigate(['/play']);
   }
 
   clickInfo(){
     
+  }
+
+  loadAudio(){
+    this.audioPlay = new Audio('assets/song/btnL.wav');
   }
 }

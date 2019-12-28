@@ -39,6 +39,9 @@ export class QuestionFormComponent implements OnInit {
   }
 
   clickAnswer(index: number){
+    const audioSelectAnswer = new Audio('assets/song/selectAnswer.wav');
+    audioSelectAnswer.play();
+
     this.selectAnswer.fill(false);
     this.selectAnswer[index] =  true;
     this.indexAnswer = index;
@@ -50,7 +53,7 @@ export class QuestionFormComponent implements OnInit {
       alert("Debe selecionar al menos una de las opciones.");
       return;
     }
-
+    
     this.clickNextQuestion.emit(this.indexAnswer);
     this.restart();
   }

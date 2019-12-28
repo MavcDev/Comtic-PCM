@@ -16,10 +16,15 @@ export class PlayPageComponent implements OnInit {
   indexQuestion: number = 0;
   indexColor: number = 0;
   scoreCategory: Array<number> = [0, 0, 0, 0, 0];
-  answerQuestion: Array<number> = []
-  resultQuestion: Array<number> = [0, 0, 0, 0, 0]
+  answerQuestion: Array<number> = [];
+  resultQuestion: Array<number> = [0, 0, 0, 0, 0];
 
-  constructor(private playService: PlayDataService) { }
+  audioResult: any;
+  audioNextQuestion: any;
+
+  constructor(private playService: PlayDataService) { 
+    this.loadAudio();
+  }
 
   ngOnInit() {
     this.init();
@@ -37,11 +42,13 @@ export class PlayPageComponent implements OnInit {
     this.indexQuestion++;
 
     if(this.indexQuestion >= 15){
+      this.audioResult.play();
       this.calculatedValueCategory();
       this.isFinishQuestion = true;
       return;
     }
 
+    this.audioNextQuestion.play();
     if ((this.indexQuestion) % 3 == 0)
       this.indexColor++;
 
@@ -69,5 +76,10 @@ export class PlayPageComponent implements OnInit {
       case 8: return 3;
       case 10: return 4;
     }
+  }
+
+  loadAudio(){
+    this.audioResult = new Audio('assets/song/nextQuestion.wav');
+    this.audioNextQuestion = new Audio('assets/song/nextQuestion.wav');
   }
 }

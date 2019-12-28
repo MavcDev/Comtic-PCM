@@ -10,7 +10,8 @@ export class UrlDefaultService {
   constructor() { }
 
   getUrlApiGame(){
-    return  this.getDataConfig("ipApiGame","http://18.218.180.32:3000");
+    //3.136.203.179
+    return  this.getDataConfig("ipApiGame","http://3.136.203.179:3000");
   }
 
   getUrlImgGame(){
@@ -18,7 +19,7 @@ export class UrlDefaultService {
   }
 
   getUrlApiLogin(){
-    return  this.getDataConfig("ipApiLogin","http://18.218.180.32:3000");
+    return  this.getDataConfig("ipApiLogin","http://3.136.203.179:3000");
   }
 
   getDataConfig(property: string, valueDefault: string){
