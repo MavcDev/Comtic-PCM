@@ -18,10 +18,12 @@ export class ResultComponent implements OnInit {
   open: boolean = true;
 
   audioHome: any;
+  audioFondo: any;
 
   @Input()
   set dataPoint(dataPoint: Array<number>){
     this.loadPointData(dataPoint);
+    this.audioFondo.play();
   }
 
   dataPointResult: any = [];
@@ -31,6 +33,11 @@ export class ResultComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  ngOnDestroy(){
+    this.audioFondo.pause();
+    this.audioFondo.currentTime = 0;
   }
 
   addPoints(){
@@ -140,5 +147,7 @@ export class ResultComponent implements OnInit {
 
   loadAudio(){
     this.audioHome = new Audio('assets/song/btnL2.wav');
+    this.audioFondo = new Audio('assets/song/fondoResultado.wav');
+    this.audioFondo.loop = true;
   }
 }

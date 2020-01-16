@@ -21,6 +21,7 @@ export class PlayPageComponent implements OnInit {
 
   audioResult: any;
   audioNextQuestion: any;
+  audioFondo: any;
 
   constructor(private playService: PlayDataService) { 
     this.loadAudio();
@@ -30,10 +31,16 @@ export class PlayPageComponent implements OnInit {
     this.init();
   }
 
+  async ngOnDestroy(){
+    this.audioFondo.pause();
+    this.audioFondo.currentTime = 0;
+  }
+
   async init(){
     this.questionList = await this.playService.getQuestion();
     this.questionMain = this.questionList[0];
     this.isLoader = true;
+    this.audioFondo.play();
   }
 
   nextQuestion(indexAnswer: number){
@@ -42,7 +49,11 @@ export class PlayPageComponent implements OnInit {
     this.indexQuestion++;
 
     if(this.indexQuestion >= 15){
-      this.audioResult.play();
+      this.audioResult.play();      
+
+      this.audioFondo.pause();
+      this.audioFondo.currentTime = 0;
+
       this.calculatedValueCategory();
       this.isFinishQuestion = true;
       return;
@@ -81,5 +92,7 @@ export class PlayPageComponent implements OnInit {
   loadAudio(){
     this.audioResult = new Audio('assets/song/nextQuestion.wav');
     this.audioNextQuestion = new Audio('assets/song/nextQuestion.wav');
+    this.audioFondo = new Audio('assets/song/fondoPartida.wav');
+    this.audioFondo.loop = true;
   }
 }
