@@ -14,7 +14,7 @@
 
 .bar-bottom{
     display: flex;
-    height: 8em;
+    height: 10em;
     border-bottom-right-radius: 2em;
     align-items: center;
     justify-content: flex-end;
@@ -40,9 +40,24 @@
     border-radius: 0.5em;
 }
 
+.frame{
+    position: absolute;
+    height: 6.5em;
+    width: 92%;
+    margin-left: 3.5em;
+    top: 3.5em;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    transform: rotate(-1deg);
+}
+
 @media (max-width: 1600px){
     .bar-bottom{
         height: auto;
         padding: 1em;
+    }
+
+    .frame{
+        display: none;
     }
 }

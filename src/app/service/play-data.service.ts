@@ -13,13 +13,13 @@ export class PlayDataService {
   constructor(private http: HttpService, 
     private urlConst: UrlDefaultService) { }
 
-  // async getQuestion() : Promise<Question[]> {
-  //   await this.http.init( this.urlConst.getUrlApiGame() );
-  //   let dataResponse = await this.http.get("pregunta/GetPreguntasAsignatura", {"Asignatura": 6});
-  //   console.log(dataResponse.body)
-  //   if(!dataResponse || !dataResponse.ok || dataResponse.status != 200) return [];
-  //   return this.getCastQuestion(dataResponse.body);
-  // }
+  async getQuestion() : Promise<Question[]> {
+    await this.http.init( this.urlConst.getUrlApiGame() );
+    let dataResponse = await this.http.get("pregunta/GetPreguntasAsignatura", {"Asignatura": 6});
+    console.log(dataResponse.body)
+    if(!dataResponse || !dataResponse.ok || dataResponse.status != 200) return [];
+    return this.getCastQuestion(dataResponse.body);
+  }
 
   getCastQuestion(data: Array<any>){
     if(!data || !Array.isArray(data)) return[];
@@ -51,18 +51,18 @@ export class PlayDataService {
     return answs;
   }
 
-  async getQuestion() : Promise<Question[]> {
+    /*async getQuestion() : Promise<Question[]> {
     await this.http.init( this.urlConst.getUrlApiGame() );
     let dataResponse = await fetch("./assets/data.json");
     if(!dataResponse || !dataResponse.ok || dataResponse.status != 200) return [];
     let aux = this.getCastQuestion(await dataResponse.json());
     return aux;
-  }
+  }*/
 
-  // async setSaveAnswers(data: HeaderAnswer){
-  //   await this.http.init( this.urlConst.getUrlApiGame() );
-  //   let dataResponse = await this.http.post("pregunta/Respuesta", data);
-  //   if(!dataResponse) return false;
-  //   return dataResponse.ok;
-  // }
+  /*async setSaveAnswers(data: HeaderAnswer){
+    await this.http.init( this.urlConst.getUrlApiGame() );
+    let dataResponse = await this.http.post("pregunta/Respuesta", data);
+    if(!dataResponse) return false;
+    return dataResponse.ok;
+  }*/
 }
