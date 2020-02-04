@@ -15,6 +15,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     this.loadAudio();
+    this.preload();
   }
 
   async ngOnDestroy(){
@@ -46,5 +47,23 @@ export class HomePageComponent implements OnInit {
     console.log('event');
     if(this.audioFondo.paused)
       this.audioFondo.play();
+  }
+
+  preload(){
+    let urls = ["./assets/result/tecnologico.png",
+    "./assets/result/CTecnologica.png", 
+    "./assets/result/comunicativa.png",
+    "./assets/result/CComunicativa.png",
+    "./assets/result/investigativa.png",
+    "./assets/result/CInvestigativa.png",
+    "./assets/result/gestion.png",
+    "./assets/result/CGestion.png",
+    "./assets/result/pedagogica.png",
+    "./assets/result/CPedagogica.png"];
+    
+    for (var i = 0; i < urls.length; i++) {
+      let img = new Image();
+      img.src = urls[i];
+    }
   }
 }
