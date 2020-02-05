@@ -5,9 +5,6 @@
         </span>
     </div>
     <div [ngStyle]="{'background-color': color}" class="bar-bottom">
-        <span class="text-bar-bottom">
-            {{content}}
-        </span> 
+        <bar-info-detail [text]="content" class="frame"></bar-info-detail>
     </div>
-    <div class="frame"></div>
 </div>

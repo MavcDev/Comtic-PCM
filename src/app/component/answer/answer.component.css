@@ -1,12 +1,9 @@
-div{
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Exo 2', sans-serif;
-}
-
 :host{
     display: flex;
     width: 50%;
-    height: 6em;
+    min-height: 6em;
+    height: auto;
+
     position: relative;
     align-items: center;
     padding: 0.5em;
@@ -36,6 +33,7 @@ div{
     margin-right: 0.5em;
     text-align: justify;
     font-size: 1.5em;
+    font-weight: bold;
     color: var(--text-dark);
 }
 
@@ -52,7 +50,10 @@ div{
 @media (max-width: 500px){
     :host{
         width: 90%;
-        height: auto;
+    }
+
+    .btn-select{
+        margin-left: -1.5em;
     }
 }
 
@@ -64,6 +65,8 @@ div{
 
 @media(min-width: 1200px) and (min-height: 1080px)  { 
     :host{
-        height: 15em;
+        height: auto;
+        min-height: 15em;
+        
     }
 }

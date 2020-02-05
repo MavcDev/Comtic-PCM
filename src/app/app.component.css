@@ -1,7 +1,7 @@
 :host{
     --primary-color: #2b4d8b;
     --text-light: white;
-    --text-dark: black;
+    --text-dark: #434040;
 }
 
 @keyframes pulse-scale {

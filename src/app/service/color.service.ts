@@ -19,7 +19,7 @@ export class ColorService {
     "#b548a5",
     "#ce7cbf",
     "#f4b06c",
-    "#d8821d",
+    "#f1a54d",
     "#c4640e"
   ]
 
@@ -27,7 +27,7 @@ export class ColorService {
     {colorMain: "#c7bad9", colorSelect: "#b548a5"},
     {colorMain: "#f2cee9", colorSelect: "#b548a5"},
     {colorMain: "#dbd879", colorSelect: "#b548a5"},
-    {colorMain: "#d8821d", colorSelect: "#b548a5"},
+    {colorMain: "#f1a54d", colorSelect: "#b548a5"},
     {colorMain: "#85bde4", colorSelect: "#b548a5"}
   ]
 

@@ -19,6 +19,7 @@ import { ChartInfoComponent } from './component/chart-info/chart-info.component'
 import { ChartDataComponent } from './component/chart-data/chart-data.component';
 import { HomePageComponent } from './page/home-page/home-page.component';
 import { LoaderMsgComponent } from './component/loader-msg/loader-msg.component';
+import { BarInfoDetailComponent } from './component/bar-info-detail/bar-info-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoaderMsgComponent } from './component/loader-msg/loader-msg.component'
     ChartInfoComponent,
     ChartDataComponent,
     HomePageComponent,
-    LoaderMsgComponent
+    LoaderMsgComponent,
+    BarInfoDetailComponent
   ],
   imports: [
     BrowserModule,
