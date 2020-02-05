@@ -10,7 +10,7 @@ import { PlayDataService } from './../../service/play-data.service'
 export class PlayPageComponent implements OnInit {
 
   isLoader: boolean = false;
-  isFinishQuestion: boolean = true; // cambiar en produccion
+  isFinishQuestion: boolean = false; // cambiar en produccion
   questionList: Array<Question>;
   questionMain: Question;
   indexQuestion: number = 0;
