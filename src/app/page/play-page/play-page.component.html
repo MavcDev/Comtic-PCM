@@ -1,3 +1,4 @@
 <loader-msg *ngIf="!isLoader"></loader-msg>
 <question-form *ngIf="!isFinishQuestion" [indexQuestion]="indexQuestion" [indexColor]="indexColor" [question]="questionMain" (clickNextQuestion)="nextQuestion($event)" ></question-form>
 <result *ngIf="isFinishQuestion" [dataPoint]="resultQuestion" ></result>
+<msg-box></msg-box>

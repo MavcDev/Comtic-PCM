@@ -20,6 +20,7 @@ import { ChartDataComponent } from './component/chart-data/chart-data.component'
 import { HomePageComponent } from './page/home-page/home-page.component';
 import { LoaderMsgComponent } from './component/loader-msg/loader-msg.component';
 import { BarInfoDetailComponent } from './component/bar-info-detail/bar-info-detail.component';
+import { MsgBoxComponent } from './component/msg-box/msg-box.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BarInfoDetailComponent } from './component/bar-info-detail/bar-info-det
     ChartDataComponent,
     HomePageComponent,
     LoaderMsgComponent,
-    BarInfoDetailComponent
+    BarInfoDetailComponent,
+    MsgBoxComponent
   ],
   imports: [
     BrowserModule,
