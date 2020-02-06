@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'msg-box',
@@ -10,12 +10,15 @@ export class MsgBoxComponent implements OnInit {
   @Input()
   color: any;
 
-  @Input()
-  show: boolean;
+  @Output() clickClose = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  click(){
+    this.clickClose.emit();
   }
 
 }
