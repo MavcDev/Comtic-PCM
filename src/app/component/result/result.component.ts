@@ -148,6 +148,7 @@ export class ResultComponent implements OnInit {
   loadAudio(){
     this.audioHome = new Audio('assets/song/btnL2.wav');
     this.audioFondo = new Audio('assets/song/fondoResultado.wav');
+    this.audioFondo.volume = 0.25;
     this.audioFondo.loop = true;
   }
 }

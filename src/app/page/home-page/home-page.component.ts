@@ -37,6 +37,7 @@ export class HomePageComponent implements OnInit {
   loadAudio(){
     this.audioPlay = new Audio('assets/song/btnL.wav');
     this.audioFondo = new Audio('assets/song/fondoMenu.wav');
+    this.audioFondo.volume = 0.25;
     this.audioFondo.loop = true; 
     setTimeout((function(){ 
       this.audioFondo.play();
