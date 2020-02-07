@@ -5,4 +5,4 @@
     <btnfinish [ngClass]="classAnimation" (click)="clickNext()" ></btnfinish>
     <line-question [listColors]= "listColorLine" [postLine]="indexQuestion + 1" ></line-question>
 </div>
-<msg-box *ngIf="openMsgBox"  [color]="listColorMain[indexColor].colorMain" (clickClose)="clickMsgBox($event)"  ></msg-box>
+<msg-box *ngIf="openMsgBox"  [color]="listColorMain[indexColor].colorMain" (clickClose)="clickMsgBox()"  ></msg-box>
