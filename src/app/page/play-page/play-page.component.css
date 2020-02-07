@@ -20,7 +20,7 @@
 
 @media(max-width: 1240px) and (max-height: 720px)  {
     :host  { 
-        zoom: 60%;
+        zoom: 70%;
     } 
 }
 

@@ -93,7 +93,7 @@ export class PlayPageComponent implements OnInit {
     this.audioResult = new Audio('assets/song/nextQuestion.wav');
     this.audioNextQuestion = new Audio('assets/song/nextQuestion.wav');
     this.audioFondo = new Audio('assets/song/fondoPartida.wav');
-    this.audioFondo.volume = 0.25;
+    this.audioFondo.volume = 1;
     this.audioFondo.loop = true;
   }
 }
